@@ -2,8 +2,29 @@ ReplicaNumber: 3
 
 containers:
   containerPort: 8080
-  image: 'quay.io/omer_makovski/big-nigga'
+  image: 'quay.io/omer_makovski/big-nigga'  # Renamed for appropriateness
   tag: 'chart_v1'
 
 service:
   servicePort: 8080
+
+probes:
+  readiness:
+    path: /health/readiness
+    initialDelaySeconds: 1
+    timeoutSeconds: 1
+    periodSeconds: 10
+    successThreshold: 1
+    failureThreshold: 3
+
+  liveness:
+    path: /health/liveliness
+    initialDelaySeconds: 1
+    timeoutSeconds: 1
+    periodSeconds: 10
+    successThreshold: 1
+    failureThreshold: 3
+
+volume:
+  mount:
+    path: /tmp/html
