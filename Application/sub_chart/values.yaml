@@ -3,15 +3,6 @@ deploy1:
   containers:
     containerPort: 8080
     image: 'quay.io/omer_makovski/big-nigga'  # Renamed for appropriateness
-    tag: 'chart_v2'
-  service:
-    servicePort: 8080
-
-deploy2:
-  ReplicaNumber: 1
-  containers:
-    containerPort: 8080
-    image: 'quay.io/omer_makovski/big-nigga'  # Renamed for appropriateness
-    tag: 'chart_v2'
+    tag: 'chart_v1'
   service:
     servicePort: 8080
