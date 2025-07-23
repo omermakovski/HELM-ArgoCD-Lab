@@ -3,12 +3,12 @@ name: workshop-test
 description: A Helm chart for Kubernetes
 type: application
 dependencies:
-  - name: Application/helm/helm-argocd-lab-1.0.0
+  - name: helm-argocd-lab-1.0.0
     repository: oci://ghcr.io/omermakovski/helm/
     version: "1.0.0"
     alias: deploy1
   - name: workshop-test
-    repository: "oci://ghcr.io/tal-hason/helm"
+    repository: oci://ghcr.io/tal-hason/helm
     version: 1.0.1
     alias: deploy2
 version: 1.0.0
