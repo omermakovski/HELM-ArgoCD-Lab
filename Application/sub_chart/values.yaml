@@ -13,7 +13,7 @@ deploy2:
 
   containers:
     containerPort: 8080
-    image: 'quay.io/argo-helm-workshop/workshop-app'
+    image: 'quay.io/omer_makovski/big-nigga'
     tag: 'chart_v2'
 
   service:
