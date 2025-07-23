@@ -4,7 +4,7 @@ description: A Helm chart for Kubernetes
 type: application
 dependencies:
   - name: helm-argocd-lab
-    repository: oci://ghcr.io/omermakovski/helm/
+    repository: oci://ghcr.io/omermakovski/helm
     version: "1.0.0"
     alias: deploy1
   - name: workshop-test
